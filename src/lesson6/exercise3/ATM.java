@@ -106,7 +106,7 @@ public class ATM {
         choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                if (sumPlus2 < banknote) {
+                if (sumPlus2 <= banknote) {
                     System.out.println("Ваша операция была успешно");
                     System.out.println("ТУНЬ-ТУНУЬ-ТУНЬ....Забирайте деньги:" + sumPlus2);
                     System.out.println("Нажмите \n1.Вернутся на главную страницу \n2.Выйти из системы");
