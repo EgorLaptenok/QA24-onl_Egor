@@ -106,27 +106,35 @@ public class ATM {
         choice = scanner.nextInt();
         switch (choice) {
             case 1:
-                if (sumPlus2 <= banknote) {
-                    System.out.println("Ваша операция была успешно");
-                    System.out.println("ТУНЬ-ТУНУЬ-ТУНЬ....Забирайте деньги:" + sumPlus2);
-                    System.out.println("Нажмите \n1.Вернутся на главную страницу \n2.Выйти из системы");
-                    banknote -= sumPlus2;
-                    choice = scanner.nextInt();
-                    switch (choice) {
-                        case 1:
-                            info();
-                            break;
-                        case 2:
-                            System.out.println("Спасибо, что выбираете нас!");
-                            break;
-                        default:
-                            System.out.println("Не известная команда переносим вас на главное меню");
-                            info();
-                            break;
+                if (check(sumPlus2)) {
+                    if (sumPlus2 <= banknote) {
+                        System.out.println("Ваша операция была успешно");
+                        System.out.println("ТУНЬ-ТУНУЬ-ТУНЬ....Забирайте деньги:" + sumPlus2);
+                        System.out.println("Нажмите \n1.Вернутся на главную страницу \n2.Выйти из системы");
+                        banknote -= sumPlus2;
+                        choice = scanner.nextInt();
+                        switch (choice) {
+                            case 1:
+                                info();
+                                break;
+                            case 2:
+                                System.out.println("Спасибо, что выбираете нас!");
+                                break;
+                            default:
+                                System.out.println("Не известная команда переносим вас на главное меню");
+                                info();
+                                break;
+                        }
+                    } else {
+                        System.out.println("Не достаточно средств");
+                        System.out.println("Переносим вас на главное меню");
+                        info();
                     }
                 } else {
-                    System.out.println("Не достаточно средств");
+                    System.out.println("Нет подходящей банкноты");
+                    System.out.println("__________________________________");
                     System.out.println("Переносим вас на главное меню");
+
                     info();
                 }
             case 2:
@@ -159,6 +167,14 @@ public class ATM {
             case 4:
                 System.out.println("Спасибо, что выбираете нас!");
                 break;
+        }
+    }
+
+    public boolean check(double arg) {
+        if (arg == 20 || arg >= 40) {
+            return true;
+        } else {
+            return false;
         }
     }
 
