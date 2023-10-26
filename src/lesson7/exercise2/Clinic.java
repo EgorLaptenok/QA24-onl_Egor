@@ -3,14 +3,7 @@ package lesson7.exercise2;
 import java.util.Scanner;
 
 public class Clinic {
-    Dentist dentist;
-    Surgeon surgeon;
-    Therapist therapist;
-    public Clinic(){
-        dentist = new Dentist();
-        surgeon = new Surgeon();
-        therapist = new Therapist();
-    }
+
     public void treatment(){
         Patient patient=new Patient();
         Scanner scanner=new Scanner(System.in);
@@ -27,20 +20,14 @@ public class Clinic {
         switch (choice){
             case 1:
                 patient.info();
-                dentist.info();
-                dentist.treatmentMethod();
                 treatmentPlan.plan(1);
                 break;
             case 2:
                 patient.info();
-                surgeon.info();
-                surgeon.treatmentMethod();
                 treatmentPlan.plan(2);
                 break;
             default:
                 patient.info();
-                therapist.info();
-                therapist.treatmentMethod();
                 treatmentPlan.plan(3);
                 break;
         }

@@ -1,12 +1,8 @@
 package lesson7.exercise2;
 
-public class Dentist extends Doctor{
-    private String name;
-    private String post;
-
-
-    public Dentist(){
-    }
+public class Doctor {
+    String name;
+    String post;
 
     public String getName() {
         return name;
@@ -23,9 +19,10 @@ public class Dentist extends Doctor{
     public void setPost(String post) {
         this.post = post;
     }
+
     public void info(){
-        setName("Том");
-        setPost("Стоматолог");
+        setName("");
+        setPost("");
         System.out.println("Лечищий врач: "+getName()+"\nДолжность врача: "+getPost());
     }
 }

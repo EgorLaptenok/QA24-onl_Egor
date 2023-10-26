@@ -1,6 +1,6 @@
 package lesson7.exercise2;
 
-public class Therapist {
+public class Therapist extends Doctor{
     private String name;
     private String post;
 
@@ -20,9 +20,6 @@ public class Therapist {
         this.post = post;
     }
 
-    public void treatmentMethod() {
-        System.out.println("Ваш лечение: Приложить подорожник");
-    }
     public void info(){
         setName("Дарья");
         setPost("Терапевт");

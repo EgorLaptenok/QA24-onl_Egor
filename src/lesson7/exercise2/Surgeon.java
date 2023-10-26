@@ -1,6 +1,6 @@
 package lesson7.exercise2;
 
-public class Surgeon {
+public class Surgeon extends Doctor{
     private String name;
     private String post;
 
@@ -20,9 +20,6 @@ public class Surgeon {
         this.post = post;
     }
 
-    public void treatmentMethod() {
-        System.out.println("Ваш лечение: Вырезать ампедицит");
-    }
     public void info(){
         setName("Дмитрий");
         setPost("Хирург");
