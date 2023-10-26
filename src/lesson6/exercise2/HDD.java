@@ -17,7 +17,7 @@ public class HDD {
         this.memory = memory;
     }
 
-    public String info() {
+    public String toString() {
         return "Название: " + name + "\n Память: " + memory + "ГБ" + "\n Тип: " + type;
     }
 }

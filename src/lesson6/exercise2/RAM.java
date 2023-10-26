@@ -14,7 +14,7 @@ public class RAM {
         this.memory = memory;
     }
 
-    public String info() {
-        return "Название: " + name + "\n Память: " + memory + "ГБ";
+    public String toString() {
+       return "Название: " + name + "\n Память: " + memory + "ГБ";
     }
 }
