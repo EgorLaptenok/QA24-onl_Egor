@@ -1,7 +1,31 @@
 package lesson8.exercise1;
 
-public class Triangle extends Figures {
+public class Triangle implements Figures {
     private double sidesOfTheTriangleA, sidesOfTheTriangleB, sidesOfTheTriangleC;
+
+    public double getSidesOfTheTriangleA() {
+        return sidesOfTheTriangleA;
+    }
+
+    public void setSidesOfTheTriangleA(double sidesOfTheTriangleA) {
+        this.sidesOfTheTriangleA = sidesOfTheTriangleA;
+    }
+
+    public double getSidesOfTheTriangleB() {
+        return sidesOfTheTriangleB;
+    }
+
+    public void setSidesOfTheTriangleB(double sidesOfTheTriangleB) {
+        this.sidesOfTheTriangleB = sidesOfTheTriangleB;
+    }
+
+    public double getSidesOfTheTriangleC() {
+        return sidesOfTheTriangleC;
+    }
+
+    public void setSidesOfTheTriangleC(double sidesOfTheTriangleC) {
+        this.sidesOfTheTriangleC = sidesOfTheTriangleC;
+    }
 
     public Triangle(double sidesOfTheTriangleA, double sidesOfTheTriangleB, double sidesOfTheTriangleC) {
         this.sidesOfTheTriangleA = sidesOfTheTriangleA;

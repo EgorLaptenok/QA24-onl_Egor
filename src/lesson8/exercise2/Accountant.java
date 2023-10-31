@@ -1,12 +1,9 @@
 package lesson8.exercise2;
 
-public class Accountant implements WorkingStaff {
-    private String post;
-    private String name;
-
+public class Accountant extends Employee {
     public Accountant(String name) {
+        super(name);
         this.post = "Бухгалтер";
-        this.name = name;
     }
 
     @Override

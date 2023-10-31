@@ -1,12 +1,9 @@
 package lesson8.exercise2;
 
-public class Director implements WorkingStaff {
-    private String post;
-    private String name;
-
+public class Director extends Employee {
     public Director(String name) {
+        super(name);
         this.post = "Директор";
-        this.name = name;
     }
 
     @Override

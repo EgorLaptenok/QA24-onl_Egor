@@ -1,7 +1,15 @@
 package lesson8.exercise1;
 
-public class Circle extends Figures {
+public class Circle implements Figures {
     private double radius;
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
 
     public Circle(double radius) {
         this.radius = radius;
